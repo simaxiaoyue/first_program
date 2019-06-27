@@ -22,14 +22,32 @@
         //2.求和函数
         this.sum = function () {
             var numbers = prompt(('请输入你要求和的数字，以逗号隔开，例如： 1,2,3,4'));
-            var arr=numbers.split(',');
-            var sum=0;
+            var arr = numbers.split(',');
+            var sum = 0;
             for (var i = 0; i < arr.length; i++) {
                 sum += parseFloat(arr[i]);
             }
             alert(sum);
         }
+        //3. 时间函数
+        this.date = function () {
+            var date = new Date();
+            var y = date.getFullYear();
+            var M = date.getMonth() + 1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            M = M < 10 ? '0' + M : M;
+            d = d < 10 ? '0' + d : d;
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
+            alert(time);
+        }
     }
+
     //创建一个新对象
     var xiaona = new XiaoNa()
     while (true) {
@@ -58,6 +76,7 @@
                 xiaona.joke();
                 break;
             default:
+                //3.4 输入错误函数调用
                 xiaona.unknow();
                 break;
         }
