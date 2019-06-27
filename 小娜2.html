@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //自定义构造函数
+    function XiaoNa() {
+        //1.询问函数
+        this.ask = function () {
+            var info = prompt(' 1.求和\n 2.时间\n 3.笑话\n q退出');
+            return info;
+        }
+        //2.求和函数
+
+    }
+    //创建一个新对象
+    var xiaona = new XiaoNa()
+    while (true) {
+        //1.询问函数调用
+        var info=xiaona.ask();
+        //2.退出
+        if(info==='q'){
+            alert('输入错误');
+            break;
+        }
+        //3 主体部分
+        switch(info){
+            case '1':
+            case '求和':
+        //3.1 求和函数调用
+                x1.sum();
+                break;
+            case '2':
+            case '时间':
+        //3.2 时间函数调用
+                x1.date();
+                break;
+            case '3':
+            case '笑话':
+        //3.3 笑话函数调用
+                x1.joke();
+                break;
+            default:
+                x1.unknow();
+                break;
+        }
+
+
+    }
+</script>
+
+</html>
