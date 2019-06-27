@@ -52,7 +52,9 @@
             var j = Math.floor(Math.random() * joke.length)
             alert(joke[j]);
         }
-        
+        this.unknow = function () {
+            alert('我不明白你在说什么,你说的是人话吗')
+        }
     }
 
     //创建一个新对象
@@ -62,7 +64,7 @@
         var info = xiaona.ask();
         //2.退出
         if (info === 'q') {
-            alert('输入错误');
+            alert('输入错误,请重新输入,别乱按!');
             break;
         }
         //3 主体部分
