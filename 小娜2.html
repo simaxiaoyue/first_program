@@ -20,37 +20,45 @@
             return info;
         }
         //2.求和函数
-
+        this.sum = function () {
+            var numbers = prompt(('请输入你要求和的数字，以逗号隔开，例如： 1,2,3,4'));
+            var arr=numbers.split(',');
+            var sum=0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += parseFloat(arr[i]);
+            }
+            alert(sum);
+        }
     }
     //创建一个新对象
     var xiaona = new XiaoNa()
     while (true) {
         //1.询问函数调用
-        var info=xiaona.ask();
+        var info = xiaona.ask();
         //2.退出
-        if(info==='q'){
+        if (info === 'q') {
             alert('输入错误');
             break;
         }
         //3 主体部分
-        switch(info){
+        switch (info) {
             case '1':
             case '求和':
-        //3.1 求和函数调用
-                x1.sum();
+                //3.1 求和函数调用
+                xiaona.sum();
                 break;
             case '2':
             case '时间':
-        //3.2 时间函数调用
-                x1.date();
+                //3.2 时间函数调用
+                xiaona.date();
                 break;
             case '3':
             case '笑话':
-        //3.3 笑话函数调用
-                x1.joke();
+                //3.3 笑话函数调用
+                xiaona.joke();
                 break;
             default:
-                x1.unknow();
+                xiaona.unknow();
                 break;
         }
 
