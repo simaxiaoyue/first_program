@@ -44,7 +44,12 @@
             var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
             alert(time);
         }
-    // 4.讲笑话功能
+        // 4.讲笑话功能
+        this.joke = function () {
+            var joke = ['笑话1', '笑话2', '笑话3', '笑话4', '笑话5', '笑话6']
+            var j = Math.floor(Math.random() * joke.length)
+            alert(joke[j]);
+        }
     }
     var x1 = new XiaoNa();
     while (true) {
@@ -68,6 +73,9 @@
             case '笑话':
                 x1.joke();
                 break;
+            default:
+             x1.unknow();
+            break;
         }
     }
 </script>
